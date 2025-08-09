@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .topbar {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topbar .left,
+    .topbar .right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .topbar a:hover {
+      text-decoration: underline;
+    }
+
+    .cart-icon {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .card h3 {
+      margin: 0.8rem 0 0.5rem;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card button {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+  <!-- Ícone de carrinho via CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="left">
+      <i class="fas fa-shopping-cart cart-icon"></i>
+      <span>Meu Carrinho</span>
+    </div>
+    <div class="right">
+      <a href="{% url 'login' %}">Login</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+
+  <h1>Produtos</h1>
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 1">
+      <h3>Produto 1</h3>
+      <p>Descrição breve do produto.</p>
+      <button>Comprar</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 2">
+      <h3>Produto 2</h3>
+      <p>Descrição breve do produto.</p>
+      <button>Comprar</button>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150" alt="Produto 3">
+      <h3>Produto 3</h3>
+      <p>Descrição breve do produto.</p>
+      <button>Comprar</button>
+    </div>
+  </div>
+
+</body>
+</html>
